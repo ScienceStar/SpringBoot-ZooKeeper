@@ -1,9 +1,10 @@
 package thread;
 
-
 import org.junit.Test;
 import runnable.BuildPotel;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Thread_Demo {
@@ -42,7 +43,7 @@ public class Thread_Demo {
     }
 
     @Test
-    public void cycleSelef(){
+    public void cycleSelf(){
         int i=0;
 
         for(;;){
@@ -52,5 +53,31 @@ public class Thread_Demo {
 
     public boolean isStop(Boolean flag){
         return false==true?true:false;
+    }
+
+    @Test
+    public void testCal(){
+        int a=3,b=4,c=5;
+
+        int result = this.cal(a=b+c,a+c,c=a>5?8:6);
+        System.out.println(result);
+    }
+
+    public int cal(int a,int b,int c){
+        int result = a+b/c;
+        return result;
+    }
+
+    /**
+     * 多线程测试
+     */
+    @Test
+    public void executorTest(){
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
+
+       for(int i=0;i<10;i++){
+           executorService.execute(new BuildPotel());
+       }
+       executorService.shutdown();
     }
 }

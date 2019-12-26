@@ -1,8 +1,9 @@
 package runnable;
 
 public class BuildPotel implements Runnable{
+    int i=0;
     @Override
     public void run() {
-        System.out.println("正在制造瓶子.....");
+        System.out.println(Thread.currentThread().getName());
     }
 }
