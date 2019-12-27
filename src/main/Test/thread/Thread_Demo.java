@@ -11,6 +11,8 @@ public class Thread_Demo {
 
     public static boolean isStop = false;
 
+    public transient String userName;
+
     @Test
     public void testThread() throws InterruptedException {
 
