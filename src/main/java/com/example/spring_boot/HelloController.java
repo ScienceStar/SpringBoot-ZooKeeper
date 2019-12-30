@@ -21,7 +21,7 @@ public class HelloController {
     }
 
     @GetMapping(value="/testsMyTag")
-    @MyTag(age=26)
+    @MyTag(age=39)
     public String testMyTag(HttpServletRequest request, HttpServletResponse response){
         String tip = (String) request.getAttribute("tip");
         return tip;

@@ -28,9 +28,9 @@ public class MyTagAspect {
             //处理注解逻辑
             int age = myTag.age();
             String tip = "";
-            if (age <= 30 && age > 0) {
+            if (age <= 35 && age > 0) {
                 tip = "年纪小于30岁先做程序员吧";
-            } else if (age > 30 && age < 35) {
+            } else if (age > 35 && age < 45) {
                 tip = "年纪在30至35之间可以回去考公务员了";
             } else {
                 tip = "你的年纪不在我考虑范围之内";
