@@ -6,6 +6,7 @@
     <modules>
         <module>NIO</module>
         <module>NIOClient</module>
+        <module>NIOClient</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
