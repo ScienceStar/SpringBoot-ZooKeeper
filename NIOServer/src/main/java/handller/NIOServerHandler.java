@@ -13,7 +13,7 @@ public class NIOServerHandler implements Runnable{
         this.selectionKey= selectionKey;
     }
     @Override
-    public void run() {
+    public synchronized void run() {
         try{
             if(selectionKey.isReadable()){
                 SocketChannel socketChannel = (SocketChannel) selectionKey.channel();
