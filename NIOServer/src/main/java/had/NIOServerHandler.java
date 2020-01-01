@@ -1,4 +1,4 @@
-package handller;
+package had;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -13,7 +13,7 @@ public class NIOServerHandler implements Runnable{
         this.selectionKey= selectionKey;
     }
     @Override
-    public synchronized void run() {
+    public void run() {
         try{
             if(selectionKey.isReadable()){
                 SocketChannel socketChannel = (SocketChannel) selectionKey.channel();

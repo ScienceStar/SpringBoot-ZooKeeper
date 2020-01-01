@@ -1,5 +1,6 @@
 package thread;
 
+import com.example.spring_boot.HelloWord;
 import org.junit.Test;
 import runnable.BuildPotel;
 
@@ -81,5 +82,11 @@ public class Thread_Demo {
            executorService.execute(new BuildPotel());
        }
        executorService.shutdown();
+    }
+
+    @Test
+    public void show(){
+        HelloWord helloWord = new HelloWord();
+        helloWord.show();
     }
 }
